@@ -34,3 +34,31 @@ npx tsc --init (create tsconfi.json)
 ## Sources: 
 1. https://modelcontextprotocol.io/docs/develop/build-server#typescript
 2. https://www.youtube.com/watch?v=ZoZxQwp1PiM
+
+
+# Add MCP server to workspace
+```
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mcp": {
+			"servers": {
+				"my-mcp-server-tutorial": {
+					"type": "stdio",
+					"command": "npm",
+					"args": [
+						"run",
+						"start"
+					],
+					"cwd": "${workspaceFolder}"  // current workspace directory
+				},
+			},
+			"inputs": []
+		}
+	}
+}
+```
