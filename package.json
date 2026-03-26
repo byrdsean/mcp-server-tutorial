@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js",
+    "start:inspector": "npx @modelcontextprotocol/inspector npm run start"
   },
   "repository": {
     "type": "git",
