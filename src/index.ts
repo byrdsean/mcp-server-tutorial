@@ -7,7 +7,7 @@ const main = async () => {
         {
             version: "1.0.0",
             name: "MCP Tutorial",
-            description: "Tutorial to lear the basics of writing a MCP server for AI agents",
+            description: "Tutorial to learn the basics of writing a MCP server for AI agents",
             title: "MCP Tutorial"
         }
     )

@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js",
+    "start:inspector": "npx @modelcontextprotocol/inspector npm run start"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/byrdsean/mcp-server-tutorial#readme",
   "dependencies": {
+    "@modelcontextprotocol/inspector": "^0.21.1",
     "@modelcontextprotocol/sdk": "^1.27.1",
     "zod": "^3.25.76"
   },
