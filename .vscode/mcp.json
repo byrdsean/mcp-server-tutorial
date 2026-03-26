@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"mcp-server-tutorial": {
+			"type": "stdio",
+			"command": "npm",
+			"args": [
+				"run",
+				"start"
+			],
+			"cwd": "${workspaceFolder}"
+		}
+	},
+	"inputs": []
+}
