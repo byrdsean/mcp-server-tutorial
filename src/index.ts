@@ -16,16 +16,25 @@ const main = async () => {
         "get_toku_name",
         {
             title: "Get a Toku name",
-            description: "Returns a random toku label from a predefined list",
+            description: "Given a name, prepend a random toku label, and return the new toku name.",
             inputSchema: {
-                name: z.string().nonempty("Name is required"),
+                name: z
+                    .string()
+                    .nonempty("Name is required")
+                    .describe("Required name used to generate a toku name"),
+            },
+            annotations: {
+                destructiveHint: false,
+                idempotentHint: false,
+                readOnlyHint: true,
+                openWorldHint: false,
+                title: "Given a name, prepend a random toku label, and return the new toku name."
             }
-
         }, 
         async ({ name }) => {
             const tokuList = ["Sentai", "Kamen Rider", "Super Gavin", "Metal Hero", "Ultraman"];
             const randomIndex = Math.floor(Math.random() * tokuList.length);
-            const tokuName = `${tokuList[randomIndex]} ${name} ${randomIndex}`;
+            const tokuName = `${tokuList[randomIndex]} ${name}`;
 
             return {
                 content: [
